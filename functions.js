@@ -5,13 +5,7 @@ function updateStatus(){
 }
 
 function turnOn(){
-    let req = new Request("https://rzi1g0kdv4.execute-api.us-east-1.amazonaws.com/CORS/start-modded-minecraft?action=start", {
-        mode:  'cors',
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
+    let req = new Request("https://rzi1g0kdv4.execute-api.us-east-1.amazonaws.com/CORS/start-modded-minecraft?action=start");
     fetch(req)
     .then((response) => {
         if(response.status === 200){
