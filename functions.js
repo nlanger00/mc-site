@@ -5,7 +5,7 @@ function updateStatus(){
 }
 
 function turnOn(){
-
+    fetch("https://vjfj5xlovg4riv6k4bpfgnzsmu0tbiuf.lambda-url.us-east-1.on.aws?action=start")
 }
 
 function turnOff(){
