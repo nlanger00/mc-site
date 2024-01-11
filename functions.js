@@ -5,7 +5,7 @@ function updateStatus(){
 }
 
 function turnOn(){
-    let req = new Request("https://vjfj5xlovg4riv6k4bpfgnzsmu0tbiuf.lambda-url.us-east-1.on.aws?action=start", {
+    let req = new Request("https://rzi1g0kdv4.execute-api.us-east-1.amazonaws.com/CORS/start-modded-minecraft?action=start", {
         mode:  'cors',
         method: 'GET',
         headers: {
