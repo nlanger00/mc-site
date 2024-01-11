@@ -6,7 +6,7 @@ function updateStatus(){
 
 function turnOn(){
     let req = new Request("https://vjfj5xlovg4riv6k4bpfgnzsmu0tbiuf.lambda-url.us-east-1.on.aws?action=start");
-    req.mode("no-cors");
+    req.mode = "no-cors";
     fetch(req)
     .then((response) => {
         if(response.status === 200){
