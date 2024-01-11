@@ -5,7 +5,7 @@ function updateStatus(){
 }
 
 function turnOn(){
-    let myheaders = new Header();
+    let myheaders = new Headers();
     myheaders.append("Access-Control-Allow-Origin", "*");
 
     let req = new Request("https://vjfj5xlovg4riv6k4bpfgnzsmu0tbiuf.lambda-url.us-east-1.on.aws?action=start", {
