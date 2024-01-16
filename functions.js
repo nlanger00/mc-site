@@ -12,7 +12,7 @@ function updateStatus(){
         }
     }).then((response) => {
         console.debug(response);
-        if(InstanceStatuses in response)
+        if(response.InstanceStatuses.length > 0)
         {
             heading.innerHTML = response.InstanceStatuses[0].InstanceState.Name;
         } else {
@@ -33,7 +33,7 @@ function turnOn(){
         }
     }).then((response) => {
         console.debug(response);
-        if(StartingInstances in response)
+        if(response.StartingInstances.length > 0)
         {
             heading.innerHTML = response.StartingInstances[0].CurrentState.Name;
         } else {
