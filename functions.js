@@ -12,7 +12,12 @@ function updateStatus(){
         }
     }).then((response) => {
         console.debug(response);
-        heading.innerHTML = response.InstanceStatuses[0].InstanceState.Name;
+        if(InstanceStatuses in response)
+        {
+            heading.innerHTML = response.InstanceStatuses[0].InstanceState.Name;
+        } else {
+            heading.innerHTML = 'Shut Down';
+        }
     });
 }
 
@@ -28,7 +33,12 @@ function turnOn(){
         }
     }).then((response) => {
         console.debug(response);
-        heading.innerHTML = response.StartingInstances[0].CurrentState.Name;
+        if(StartingInstances in response)
+        {
+            heading.innerHTML = response.StartingInstances[0].CurrentState.Name;
+        } else {
+            heading.innerHTML = 'Shut Down';
+        }
     });
 }
 
@@ -44,5 +54,6 @@ function turnOff(){
         }
     }).then((response) => {
         console.debug(response);
+        heading.innerHTML = response.StoppingInstances[0].CurrentState.Name;
     });
 }
