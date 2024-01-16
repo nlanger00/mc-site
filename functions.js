@@ -1,7 +1,8 @@
 const heading = document.getElementById("status_display");
 
 function updateStatus(){
-    heading.textContent = "Status Updated";
+    let req = new Request("https://vjfj5xlovg4riv6k4bpfgnzsmu0tbiuf.lambda-url.us-east-1.on.aws?action=status", {
+    });
 }
 
 function turnOn(){
