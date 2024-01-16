@@ -4,11 +4,12 @@ function updateStatus(){
     let req = new Request("https://vjfj5xlovg4riv6k4bpfgnzsmu0tbiuf.lambda-url.us-east-1.on.aws?action=status", {
     mode: "cors",
     method: "GET"
-});
+    });
+    console.log("here2")
     fetch(req)
     .then((response) => {
         if(response.status === 200){
-            console.log("here1");
+            CRQ000003124460
             return response.json();
         }
     }).then((response) => {
