@@ -2,7 +2,8 @@ const heading = document.getElementById("status_display");
 
 function updateStatus(){
     let req = new Request("https://rzi1g0kdv4.execute-api.us-east-1.amazonaws.com/CORS/start-modded-minecraft?action=status", {
-    mode: "cors"
+    mode: "cors",
+    referrerPolicy: "strict-origin-when-cross-origin"
 });
     fetch(req)
     .then((response) => {
