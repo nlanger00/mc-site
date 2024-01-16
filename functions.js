@@ -9,7 +9,7 @@ function updateStatus(){
     fetch(req)
     .then((response) => {
         if(response.status === 200){
-            CRQ000003124460
+            console.log("here1");
             return response.json();
         }
     }).then((response) => {
