@@ -11,6 +11,7 @@ function updateStatus(){
             return response.json();
         }
     }).then((response) => {
+        console.debug("here");
         console.debug(response);
     });
 }
