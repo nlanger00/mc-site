@@ -8,12 +8,12 @@ function updateStatus(){
     fetch(req)
     .then((response) => {
         if(response.status === 200){
-            console.debug("here1");
+            console.log("here1");
             return response.json();
         }
     }).then((response) => {
-        console.debug("here");
-        console.debug(response);
+        console.log("here");
+        console.log(response);
     });
 }
 
