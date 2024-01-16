@@ -13,8 +13,7 @@ function updateStatus(){
             return response.json();
         }
     }).then((response) => {
-        console.log("here");
-        console.log(response);
+        heading.innerHTML = response.body.InstanceStatuses[0].InstanceState.Name;
     });
 }
 
