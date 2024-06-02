@@ -8,24 +8,13 @@
         <ul style="list-style: none;">
             <li><button onclick="updateStatus()">Update Status</button></tr>
             <li><button onclick="turnOff()">Off</button></tr>
+            <li><button onclick="checkPlayerCount()">Refresh Player Count</button></tr>
         </ul>
         <div class="player-count-div">
             This many people online <span class="player-count"></span>
         </div>
         
         <script src="https://mcapi.us/scripts/minecraft.min.js"></script>
-        <script>
-            MinecraftAPI.getServerStatus('44.207.181.221', {
-                port: 25565 // optional, only if you need a custom port
-            }, function (err, status) {
-                if (err) {
-                    return document.querySelector('.player-count').innerHTML = 'Error loading status';
-                }
-        
-                // you can change these to your own message!
-                document.querySelector('.player-count').innerHTML = status.players.now;
-            });
-        </script>
         <script src="functions.js"></script>
     </body>
 
