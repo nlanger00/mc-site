@@ -66,6 +66,7 @@ function checkPlayerCount(){
             return document.querySelector('.player-count').innerHTML = 'Error loading status';
         }
     
-    // you can change these to your own message!
-    document.querySelector('.player-count').innerHTML = status.players.now;
+        // you can change these to your own message!
+        document.querySelector('.player-count').innerHTML = status.players.now;
+        });
 }
