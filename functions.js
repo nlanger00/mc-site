@@ -12,12 +12,17 @@ function updateStatus(){
         }
     }).then((response) => {
         console.debug(response);
+        let fill = "Shut Down";
         if(response.InstanceStatuses.length > 0)
         {
-            heading.innerHTML = response.InstanceStatuses[0].InstanceState.Name;
-        } else {
-            heading.innerHTML = 'Shut Down';
+            let res = response.InstanceStatuses[0].InstanceState.Name;
+            if(res == "pending") {
+                fill = "Server is starting, be patient;
+            } else {
+                fill = res;
+            }
         }
+        heading.innerHTML = fill;
     });
 }
 
