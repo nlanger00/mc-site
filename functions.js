@@ -17,7 +17,7 @@ function updateStatus(){
         {
             let res = response.InstanceStatuses[0].InstanceState.Name;
             if(res == "pending") {
-                fill = "Server is starting, be patient;
+                fill = "Server is starting, be patient";
             } else {
                 fill = res;
             }
