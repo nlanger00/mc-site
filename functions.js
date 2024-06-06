@@ -87,5 +87,5 @@ function sendCommand(command){
     fetch(req)
     .then((response) => {
         console.log(response);
-    })
+    });
 }
