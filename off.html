@@ -13,11 +13,9 @@
         <div class="player-count-div">
             This many people online <span class="player-count"></span>
         </div>
-
-        <form onclick="sendCommand(document.getElementById('command').value)">
-            <input id="command"></input>
-            <input type="submit"></input>
-        </form>
+        
+        <input id="command"></input>
+        <button onclick="sendCommand(document.getElementById('command').value)"> Submit </button>
         
         <script src="https://mcapi.us/scripts/minecraft.min.js"></script>
         <script src="functions.js"></script>
