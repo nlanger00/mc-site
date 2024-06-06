@@ -75,3 +75,14 @@ function checkPlayerCount(){
         document.querySelector('.player-count').innerHTML = status.players.now;
         });
 }
+
+function sendCommand(command){
+    let req = new Request("http://44.207.181.221/index.php?".concat(command), {
+        mode: "cors",
+        method: "GET"
+    });
+    fetch(req)
+    .then((response) => {
+        return response;
+    })
+}
