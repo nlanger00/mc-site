@@ -78,7 +78,7 @@ function checkPlayerCount(){
 
 function sendCommand(command){
     console.log(command);
-    let req = new Request("https://44.207.181.221/index.php?".concat(command), {
+    let req = new Request("http://44.207.181.221/index.php?".concat(command), {
         mode: "cors",
         method: "GET"
     });
