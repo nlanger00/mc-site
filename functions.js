@@ -77,8 +77,7 @@ function checkPlayerCount(){
 }
 
 function sendCommand(command){
-    command = command.replace("'", "\'");
-    command = command.replace("\"", "\\"");
+    command = escape(command);
     console.log(command);
     let req = new Request("https://vjfj5xlovg4riv6k4bpfgnzsmu0tbiuf.lambda-url.us-east-1.on.aws?action=command&command_data=".concat(command), {
         mode: "cors",
